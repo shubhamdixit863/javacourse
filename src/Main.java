@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
 
+     User user;
     // Datatypes  -primitive ,user defined datatype
 
       // byte - 8 bit
@@ -28,6 +29,17 @@ public class Main {
       public  static int subtract(int a ,int b){  // instance methods
           return a+b;
       }
+
+    void Some(User user){
+        user.name="John";
+
+    }
+
+    int Some2(int user){
+      user=90;
+      return user;
+
+    }
 
 
     public static void main(String[] args) {  // static means relevant to class or belonging to a class
@@ -78,12 +90,41 @@ public class Main {
         //String[] ceu={"hsjs","ksksk","sss"};
         ArrayList<Integer> arrayList=new ArrayList<>();
 
+        Main mn=new Main();
+        User user=new User("john");  // default constructor
+        user.name="Some name";
+        System.out.println(user.name);
+
+        mn.Some(user);
+
+        System.out.println(user.name);
+        int g=989;
+        int ks=mn.Some2(g);
+        System.out.println(ks);
+
     }
 
+
+
+
+
+    // In java everything is pass by value strict
 
 }
 
 class User{
+    String name;
+
+    // parameterized constructir
+    User(String name){
+        this.name=name;
+    }
+
+    // Default constructor
+    User(){
+
+    }
+
     public  static int subtract(int a ,int b){
         // instance methods
       //  Main main=new Main();
